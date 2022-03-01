@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url("./fonts/FuturaPTDemi.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Futura PT LT';
+  src: url("./fonts/FuturaPTLight.otf") format("opentype");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.3;
+  color: #000000;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.container {
+  background: #A45C40;
+  color: white;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+  -webkit-transition: background .2s ease-in;
+  transition: background .2s ease-in;
+  min-height: 500px;
+}
+
+.container__app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  height: 95%;
+  min-height: 500px;
+  border-radius: 10px;
+  color: inherit;
+  background-color: #C38370;
+  -webkit-transition: background .2s ease-in;
+  transition: background .2s ease-in;
+}
+
+.container__app__header {
+  margin-bottom: 1.5rem;
+  color: inherit;
+  text-align: center;
+  font-family: "Futura PT LT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.618rem;
+}
+
+.container__app__timer {
+  color: inherit;
+  text-align: center;
+}
+
+.container__app__timer button {
+  cursor: pointer;
+  border: none;
+  font-size: 0.618rem;
+  font-family: inherit;
+  background: #F6EEE0;
+  color: #A45C40;
+  padding: .8rem 1.8rem;
+  border-radius: 28px;
+  -webkit-transition: background .1s ease-in;
+  transition: background .1s ease-in;
+}
+
+.container__app__timer__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container__app__timer__options h3 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.3;
+  font-weight: lighter;
+  -webkit-transition-property: opacity, color, -webkit-transform;
+  transition-property: opacity, color, -webkit-transform;
+  transition-property: opacity, transform, color;
+  transition-property: opacity, transform, color, -webkit-transform;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font-size: 1rem;
+}
+
+.container__app__timer__options h3.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.container__app__timer__display {
+  font-size: 5.063rem;
+  margin-bottom: 1rem;
+}
+
+.container__app__timer__display #time {
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.info {
+  max-width: 1100px;
+  margin: 0 auto 6rem auto;
+}
+
+.info__title {
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 1rem;
+  font-size: 4.236rem;
+}
+
+.info__cards__card {
+  padding: 1.5rem 1rem;
+  margin-bottom: .5rem;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: .8s;
+          transition-duration: .8s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.info__cards__card h3 {
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.618rem;
+  margin-bottom: .7rem;
+}
+
+.info__cards__card li {
+  list-style-position: inside;
+  font-size: 1rem;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #535353;
+}
+
+.info__cards__card p {
+  font-size: 1rem;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #535353;
+}
+
+.info__cards__card.active {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 36em) {
+  .container__app__header {
+    font-size: 1rem;
+  }
+  .container__app h3 {
+    font-size: 1.618rem;
+  }
+  .container__app #time {
+    font-size: 6.854rem;
+  }
+  .container__app button {
+    font-size: 1rem;
+    padding: 1rem 2.3rem;
+  }
+  .info__title {
+    font-size: 6.854rem;
+  }
+  .info h3 {
+    font-size: 2.618rem;
+  }
+  .info p, .info li {
+    font-size: 1.618rem;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .container__app__header {
+    font-size: 1.618rem;
+  }
+  .container__app h3 {
+    font-size: 2.618rem;
+  }
+  .container__app #time {
+    font-size: 11.089rem;
+  }
+  .container__app button {
+    font-size: 1.618rem;
+    padding: 1.2rem 2.8rem;
+  }
+  .info__title {
+    font-size: 6.854rem;
+  }
+  .info h3 {
+    font-size: 2.618rem;
+  }
+  .info p, .info li {
+    font-size: 1.618rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

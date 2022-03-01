@@ -1,0 +1,238 @@
+@import 'color';
+@import 'variables';
+@import 'fonts';
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $sans-serif;
+    line-height: 1.3;
+    color: $black;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.container {
+    background: #A45C40;
+    color: white;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 3rem;
+    transition: background .2s ease-in;
+    min-height: 500px;
+    // max-height: 800px;
+}
+
+.container__app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+    min-height: 500px;
+    border-radius: 10px;
+    color: inherit;
+    background-color: #C38370;
+    transition: background .2s ease-in;
+
+    &__header {
+        margin-bottom: 1.5rem;
+        color: inherit;
+        text-align: center;
+        font-family: $sans-serif-lt;
+        letter-spacing: 1px;
+        font-size: 0.618rem;
+    }
+
+    &__timer {
+        color: inherit;
+        text-align: center;
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-size: 0.618rem;
+            font-family: inherit;
+            background: #F6EEE0;
+            color: #A45C40;
+            padding: .8rem 1.8rem;
+            border-radius: 28px;
+            transition: background .1s ease-in;
+        }
+
+        &__options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            font-family: $sans-serif;
+
+            h3 {
+                transform: scale(.9);
+                opacity: 0.3;
+                font-weight: lighter;
+                transition-property: opacity, transform, color;
+                transition-duration: .2s;
+                transition-timing-function: linear;
+                font-size: 1rem;
+            }
+
+            h3.active {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        &__display {
+            font-size: 5.063rem;
+            margin-bottom: 1rem;
+            #time {
+                font-family: $sans-serif;
+            }
+        }
+
+    }
+}
+
+
+.info {
+    max-width: 1100px;
+    margin: 0 auto 6rem auto;
+
+    &__title {
+        font-family: $sans-serif;
+        padding: 0 1rem;
+        font-size: 4.236rem;
+    }
+
+    &__cards {
+        &__card {
+            padding: 1.5rem 1rem;
+            margin-bottom: .5rem;
+            transform: translateY(50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+            transition-duration: .8s;
+            transition-timing-function: ease-in;
+
+            h3 {
+                font-family: $sans-serif;
+                font-size: 1.618rem;
+                margin-bottom: .7rem;
+            }
+
+            li {
+                list-style-position: inside;
+                font-size: 1rem;
+                font-family: $serif;
+                color: #535353;
+            }
+
+            p {
+                font-size: 1rem;
+                font-family: $serif;
+                color: #535353;
+            }
+        }
+
+        &__card.active {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+// media queries
+
+// min-width: 36em
+@media only screen and (min-width: 36em) {
+.container__app {
+    &__header {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.618rem;
+    }
+
+    #time {
+        font-size: 6.854rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 1rem 2.3rem;
+    }
+}
+
+.info {
+    &__title {
+        font-size: 6.854rem;
+    }
+
+    h3 {
+        font-size: 2.618rem;
+    }
+
+    p, li {
+        font-size: 1.618rem;
+    }
+}
+}
+
+//min-width: 62em
+@media only screen and (min-width: 62em) {
+    .container__app {
+        &__header {
+            font-size: 1.618rem;
+        }
+    
+        h3 {
+            font-size: 2.618rem;
+        }
+    
+        #time {
+            font-size: 11.089rem;
+        }
+    
+        button {
+            font-size: 1.618rem;
+            padding: 1.2rem 2.8rem;
+        }
+    }
+    
+    .info {
+        &__title {
+            font-size: 6.854rem;
+        }
+    
+        h3 {
+            font-size: 2.618rem;
+        }
+    
+        p, li {
+            font-size: 1.618rem;
+        }
+    }
+    
+}
+
+
+
+
