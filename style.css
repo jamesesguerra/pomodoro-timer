@@ -40,7 +40,6 @@ body {
   -webkit-transition: background .2s ease-in;
   transition: background .2s ease-in;
   min-height: 500px;
-  min-width: 445px;
 }
 
 .container__app {
@@ -119,7 +118,7 @@ body {
           transition-duration: .2s;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  font-size: 1.618rem;
+  font-size: 1.5rem;
 }
 
 .container__app__timer__options h3.active {
