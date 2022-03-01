@@ -30,6 +30,7 @@ body {
     margin-bottom: 3rem;
     transition: background .2s ease-in;
     min-height: 500px;
+    min-width: 445px;
     // max-height: 800px;
 }
 
@@ -51,7 +52,7 @@ body {
         text-align: center;
         font-family: $sans-serif-lt;
         letter-spacing: 1px;
-        font-size: 0.618rem;
+        font-size: 1rem;
     }
 
     &__timer {
@@ -61,11 +62,11 @@ body {
         button {
             cursor: pointer;
             border: none;
-            font-size: 0.618rem;
+            font-size: 1rem;
             font-family: inherit;
             background: #F6EEE0;
             color: #A45C40;
-            padding: .8rem 1.8rem;
+            padding: 1rem 2rem;
             border-radius: 28px;
             transition: background .1s ease-in;
         }
@@ -85,7 +86,7 @@ body {
                 transition-property: opacity, transform, color;
                 transition-duration: .2s;
                 transition-timing-function: linear;
-                font-size: 1rem;
+                font-size: 1.618rem;
             }
 
             h3.active {
@@ -95,7 +96,7 @@ body {
         }
 
         &__display {
-            font-size: 5.063rem;
+            font-size: 5.653rem;
             margin-bottom: 1rem;
             #time {
                 font-family: $sans-serif;
@@ -161,14 +162,14 @@ footer {
 // media queries
 
 // min-width: 36em
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 43.4375em) {
 .container__app {
     &__header {
-        font-size: 1rem;
+        font-size: 1.618rem;
     }
 
     h3 {
-        font-size: 1.618rem;
+        font-size: 2.618rem;
     }
 
     #time {
@@ -176,8 +177,8 @@ footer {
     }
 
     button {
-        font-size: 1rem;
-        padding: 1rem 2.3rem;
+        font-size: 1.618rem;
+        padding: 1.3rem 2.3rem;
     }
 }
 
